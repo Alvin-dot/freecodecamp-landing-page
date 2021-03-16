@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=roboto');
+
+:root {
+    --header-color: #231f52;
+    --button-bg-color: rgba(101,188,123,0.85);
+    --button-bg-color-highlight: #65bc7b;
+    --card-title-background: #dddddd;
+}
+
+/* whole document config */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* header config */
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    padding: 0px 20px;
+    min-height: 75px;
+    background: var(--header-color);
+    width: 100%;
+}
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+/* nav config */
+nav {
+    font-weight: 400;
+}
+@media (max-width: 650px) {
+    #nav-bar {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+    #nav-bar li {
+        padding-bottom: 5px;
+    }
+}
+
+/* ul config */
+nav > ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (max-width: 650px) {
+    #nav-bar > ul {
+        flex-direction: column;
+    }
+}
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* main config */
+/* medium */
+main {
+    margin-top: 125px;
+}
+/* small */
+@media (max-width: 600px) {
+    main {
+        margin-top: 213px;
+    }
+}
+/* large */
+@media (min-width: 650px) {
+    main {
+        margin-top: 120px;
+    }
+}
+
+/* Set logo container size based on page size */
+.div-logo {
+    width: 60vw;
+}
+@media (max-width: 650px) {
+    .div-logo {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
+}
+
+/* This refers to the img element inside class div-logo */
+.div-logo > img {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 10px 20px;
+  }
+  @media (max-width: 650px) {
+    .div-logo > img {
+      margin: 5px auto;
+    }
+}
+
+/*page title config*/
+.page-title {
+    padding: 10px;
+    text-align: center;
+}
+.page-title h1 {
+    font-size: 30px;
+}
+.page-title p {
+    font-size: 20px;
+}
+
+/* page form config */
+.page-form {
+    padding: 10px 0;
+    text-align: center;
+}
+.page-form h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+.page-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.page-form input {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 3px;
+    min-height: 30px;
+}
+.btn {
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    min-height: 45px;
+    padding: 0 20px;
+    border: 3px transparent solid;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--button-bg-color-highlight);
+    transition: background-color 0.2s;
+}
+
+/* page features config */
+.page-features {
+    padding-top: 50px;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-features-section {
+    display: flex;
+}
+.page-features i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    width: 20vw;
+    color: darkcyan;
+}
+@media (max-width: 550px) {
+    .page-features i {
+        display: none;
+    }
+}
+.page-features-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
+    text-align: left;
+}
+.page-features-text h2 {
+    font-size: 22px;
+}
+@media (max-width: 550px) {
+    .page-features-text {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        height: 150px;
+    }
+}
+
+/* page products config */
+.page-products {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-title {
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.cards-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 15px 0 15px;
+    max-width: 1000px;
+    width: 100%;
+}
+@media (max-width: 550px) {
+    .cards-group {
+        flex-direction: column;
+    }
+}
+.product-card {
+    text-align: center;
+    border: 1px black solid;
+    width: 100%;
+    margin: 5px;
+}
+.product-card h2 {
+    padding: 10px 0;
+    text-transform: uppercase;
+    background: var(--card-title-background);
+}
+.product-card h3 {
+    font-size: 18px;
+    padding: 10px;
+}
+.product-card p {
+    padding: 5px;
+}
+.product-card button {
+    margin: 25px 0;
+}
+
+/* page video config */
+.page-video {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.page-video iframe {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 15px;
+}
+
+/* page footer config */
+.page-footer {
+    background-color: var(--card-title-background);
+    margin-top: 50px;
+    padding: 20px;
+}
+.page-footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+@media (max-width: 650px) {    
+    .page-footer nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }    
+    
+}
+    
+.page-footer ul {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+}
+.page-footer li {
+    padding: 0 10px;
+}
+.page-footer a {
+    color: #444
+}
+.page-footer span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    color: #444
+}
